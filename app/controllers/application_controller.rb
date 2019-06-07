@@ -25,7 +25,8 @@ class ApplicationController < Sinatra::Base
     if @session.empty?
       erb :error
     else
-    erb :account
+      erb :account
+    end
   end
 
   get '/logout' do
