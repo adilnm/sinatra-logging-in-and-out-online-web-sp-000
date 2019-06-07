@@ -20,6 +20,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
+    @session=session
+
+    if @session.empty?
+      erb :error
+    else
     erb :account
   end
 
